@@ -2,7 +2,7 @@
 
 import sys
 
-def parse_adjacency_matrix_rows(filename):
+def get_adjacency_matrix_rows(filename):
     with open(filename) as f:
         n = int(f.readline())
         return [f.readline() for i in range(n)]
@@ -77,7 +77,7 @@ if __name__ == '__main__':
             output = get_output(
                 test_bipartiteness(
                     get_adjacency_list(
-                        parse_adjacency_matrix_rows(sys.argv[1])
+                        get_adjacency_matrix_rows(sys.argv[1])
                     ), 0
                 )
             )
