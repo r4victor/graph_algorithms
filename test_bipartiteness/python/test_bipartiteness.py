@@ -72,7 +72,7 @@ def write_to_file(filename, output):
 if __name__ == '__main__':
     if len(sys.argv) > 1:
         if sys.argv[1] == '--help':
-            print('usage: $./test_bipartiteness.py ')
+            print('usage: $./test_bipartiteness.py input.txt')
         else:
             output = get_output(
                 test_bipartiteness(
