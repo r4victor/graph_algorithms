@@ -2,6 +2,7 @@
 
 import sys
 
+
 def get_adjacency_matrix_rows(filename):
     with open(filename) as f:
         n = int(f.readline())
@@ -12,7 +13,7 @@ def get_adjacency_list(adjacency_matrix_rows):
     adjacency_list = [None]*len(adjacency_matrix_rows)
     for i, row in enumerate(adjacency_matrix_rows):
         adjacency_list[i] = set(
-                                j for j, value in enumerate(row.split(' '))
+                                j for j, value in enumerate(row.split())
                                 if int(value)
                             )
     return adjacency_list
